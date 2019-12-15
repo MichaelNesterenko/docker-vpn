@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  vpn:
+    build:
+      context: ./containers/vpn
+    volumes:
+      - ./msgbox:/msgbox
+    ports:
+      - "127.0.0.1:17545:1080"
+    cap_add:
+      - NET_ADMIN
+
